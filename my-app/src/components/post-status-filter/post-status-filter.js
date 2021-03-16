@@ -20,7 +20,6 @@ export default class PostStatusFilter extends Component {
         ];
     }
     render() {
-        console.log(this.props.filter);
         const buttons = this.buttons.map(({name, label}) => {
             const active = this.props.filter === name;
             const buttonClass = active? 'btn-primary' : 'btn-outline-primary';

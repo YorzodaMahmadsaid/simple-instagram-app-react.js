@@ -11,7 +11,13 @@ const PostList = ({posts, onDelete, onToggleImportant, onToggleLiked}) => {
                 <PostListItem {...itemProps}
                               editingIndex={editingIndex}
                               itemIndex={itemIndex}
-                              onEdit={(editingIndex) => {setEditingIndex(editingIndex)}}
+                              onEdit={(editingIndex) => {
+                                  setEditingIndex(editingIndex)
+                              }
+                              }
+                              sendEditedItemData={(editedItemData) => {
+                                  posts[editingIndex].label = editedItemData;
+                              }}
                               onDelete={() => onDelete(id)}
                               onToggleImportant={() => onToggleImportant(id)}
                               onToggleLiked={() => onToggleLiked(id)}/>

@@ -17,9 +17,9 @@ export default class App extends Component {
                 {label: 'I need a break...', important: false, like: false, id: 3},
                 {label: 'I need a break...', important: true, like: false, id: 4},
                 {label: 'I need a break...', important: false, like: true, id: 5},
-                {label: 'I need a break...', important: false, like: false, id: 6},
+                {label: 'I need a break...', important: false, like: true, id: 6},
                 {label: 'I need a break...', important: true, like: false, id: 7},
-                {label: 'I need a break...', important: false, like: false, id: 8}
+                {label: 'I need a break...', important: false, like: true, id: 8}
             ],
             term: '',
             filter: 'all'
@@ -137,6 +137,7 @@ export default class App extends Component {
                 </div>
                 <PostList posts={visiblePosts}
                           onDelete={this.deleteItem}
+                          hideRow={this.hideRow}
                           onToggleImportant={this.onToggleImportant}
                           onToggleLiked={this.onToggleLiked}/>
                 <PostAddForm onAdd={this.addItem}/>

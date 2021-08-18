@@ -53,7 +53,7 @@ export default class App extends Component {
                 important: true,
                 id: this.maxId++
             }
-            this.setState(({data}) => {
+            this.setState((data) => {
                 const newArr = [...data, newItem];
                 return {
                     data: newArr
@@ -63,7 +63,7 @@ export default class App extends Component {
     }
 
     onToggleImportant(id) {
-        this.setState(({data}) => {
+        this.setState((data) => {
             const index = data.findIndex(element => element.id === id);
             const old = data[index];
             const newItem = {...old, important: !old.important};
